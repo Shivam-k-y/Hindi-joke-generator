@@ -2,8 +2,9 @@
 body {
     margin: 0;
     padding: 0;
-    background: #00000080;
-    font-family: Arial, sans-serif;
+    background: rgba(34, 193, 195,1);
+    background: linear-gradient(0deg, rgba(34, 193, 195,1)0%, rgba(253,187,45,1)100%);
+    min-height: 96vh;
 }
 
 .container {
@@ -16,8 +17,7 @@ body {
     margin: 0 auto;
     margin-top: 25px;
     border-radius: 10px;
-    background: rgba(34, 193, 195,1);
-    background: linear-gradient(0deg, rgba(34, 193, 195,1)0%, rgba(253,187,45,1)100%);
+    background-color: #ffffff20;
     color: #343a40;
     font-family: Arial, sans-serif;
     width: 40%;
@@ -28,13 +28,14 @@ body {
 .header {
     font-size: 1.4em;
     color: #00000090;
+    margin-left: 100px;
 }
 
 /* Joke box styles */
 .jokeBox {
     max-width: 600px;
     margin: 15px;
-    background-color: #ffffff40;
+    background-color: #ffffff50;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
@@ -52,7 +53,7 @@ body {
     margin: 1em;
     font-size: 0.9em;
     color: #242424;
-    background-color: #ffffff70;
+    background-color: #ffffff50;
     border: none;
     border-radius: 20px;
     cursor: pointer;

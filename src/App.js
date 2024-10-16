@@ -4,7 +4,7 @@ import JokeCard from "./components/JokeCard";
 import "./styles/styles.css";
 
 // API URL for random joke
-const url = "https://official-joke-api.appspot.com/random_joke";
+const url = "https://hindi-jokes-api.onrender.com/jokes?api_key=a7f3ed1c3266fd0dc5467c48c330";
 
 function App() {
   const [jokes, setJokes] = useState([]); // Store all jokes in an array
@@ -43,29 +43,29 @@ function App() {
 
   // Function to remove a joke by ID
   const removeJoke = (id) => {
-    setJokes((prevJokes) => prevJokes.filter((joke) => joke.id !== id));
+    setJokes((prevJokes) => prevJokes.filter((joke) => joke._id !== id));
   };
 
   return (
     <div className="container">
-      <h1>Random Joke API Test</h1>
+      <h1>
+        चुटकुले बोल रहे हैं </h1>
       <JokeLoaderButton loadNewJoke={loadNewJoke} />
       <div>
         <h3 className="header">
           {isLoading
-            ? "Loading one more joke..."
-            : `Random Jokes overview (${jokes.length === 1 ? "1 joke" : `${jokes.length} jokes`} loaded)`}
+            ? "एक और चुटकुला लोड हो रहा है..."
+            : `हँसना मना है!  (${jokes.length === 1 ? "1 चुटकुला" : `${jokes.length} चुटकुले`} loaded)`}
         </h3>
-        {/* Display jokes only after they are loaded */}
         {jokes.length > 0 ? (
           jokes.map((joke) => (
             <JokeCard
               joke={joke}
-              removeJoke={() => removeJoke(joke.id)}
+              removeJoke={() => removeJoke(joke._id)}
             />
           ))
         ) : (
-          <p>No jokes available</p>
+          <p>कोई चुटकुले उपलब्ध नहीं है</p>
         )}
       </div>
     </div>
