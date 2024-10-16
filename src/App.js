@@ -54,7 +54,7 @@ function App() {
     <div className="container">
       <h1>
         चुटकुले हैं </h1>
-      <button className="button" onClick={handleClick}>ENGLISH JOKE</button>
+      <button className="button" onClick={handleClick}>ENGLISH JOKES</button>
       <JokeLoaderButton loadNewJoke={loadNewJoke} />
       <div>
         <h3 className="header">
