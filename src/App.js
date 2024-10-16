@@ -46,10 +46,15 @@ function App() {
     setJokes((prevJokes) => prevJokes.filter((joke) => joke._id !== id));
   };
 
+  const handleClick = () => {
+    window.location.href = 'https://english-joke-generator.vercel.app';
+  };
+
   return (
     <div className="container">
       <h1>
-        चुटकुले बोल रहे हैं </h1>
+        चुटकुले हैं </h1>
+      <button className="button" onClick={handleClick}>ENGLISH JOKE</button>
       <JokeLoaderButton loadNewJoke={loadNewJoke} />
       <div>
         <h3 className="header">
